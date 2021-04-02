@@ -2,13 +2,16 @@
 // Completed: Downloaded Inquierer
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js')
+const generateMarkdown = require('./utils/generateMarkdown.js');
+const path = require('path');
 
 // TODO: Create an array of questions for user input
 const questions = ["What is the title of your project?", "Please write a description of your project.", "What are the installation instructions?", "What is the usage information?", "What are the contribution guidelines?", "What are the test instructions?", "Please choose a license for your application.", "Enter your Github username.", "What is your email address?", "Please explain how someone can reach you."];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(__dirname, fileName), data)
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -16,50 +19,78 @@ function init() {
     .prompt([{
         type: 'input',
         message: questions[0],
-        name: 'Name',
+        name: 'title',
         },
         {
          type: 'input',
          message: questions[1],
-         name: 'Description',   
+         name: 'description',   
         },
         {
         type: 'input',
         message: questions[2],
-        name: 'Usage-Info',
+        name: 'installationInfo'
         },
         {
         type: 'input',
         message: questions[3],
-        name: 'Contribtuion-Info',
+        name: 'usageInfo',
         },
         {
         type: 'input',
         message: questions[4],
-        name: 'Test-Info',
+        name: 'contribtuionInfo',
         },
         {
         type: 'input',
+        message: questions[5],
+        name: 'testInfo',
+        },
+        {
+        type: 'list',
         message: questions[6],
-        name: 'Github-username',
+        name: 'license',
+        choices: [{
+            name: 'MIT',
+            value: 'MIT',
+        },
+        {
+            name: 'Apache 2.0',
+            value: 'Apache%202.0',
+        },
+        {
+            name: 'GPL 3.0',
+            value: 'GPL%203.0',
+        },
+        {
+            name: 'BSD 3',
+            value: 'BSD%203',
+        },
+        {
+            name: 'none',
+            value: 'none'
+        }
+        ]
         },
         {
         type: 'input',
         message: questions[7],
-        name: 'Email',
+        name: 'githubUsername',
         },
         {
         type: 'input',
         message: questions[8],
-        name: 'Contact-Info',
+        name: 'email',
+        },
+        {
+        type: 'input',
+        message: questions[9],
+        name: 'contactInfo',
         }
     ])
-    .then((response) =>
-        {console.log(response)
-        let answers = JSON.stringify(response);
-        fs.writeFile('log.txt', answers, (err) =>
-        err ? console.log(err) : console.log('Success!')
-        )
+    .then((response) => {
+        console.log(response)
+        writeToFile('README.md', generateMarkdown(response));
     });
 }
 

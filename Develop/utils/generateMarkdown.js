@@ -22,32 +22,33 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data.license)}
   # Table of Contents
   * [Description](#description)
-  * [Installation Instructions](#installationInfo)
-  * [Usage Information](#)
-  * [Contribution Guidelines](*)
-  * [Test Instructions](*)
-  * [Contact Information](*)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contribution](#contribution)
+  * [Testing](#testing)
+  * [Contact](#contact)
 
   # Description
   >${data.description}
 
-  # Installation Instructions
+  # Installation
   >${data.installationInfo}
 
-  # Usage Information
+  # Usage
   >${data.usageInfo}
 
-  # Contribution Guidelines
+  # Contribution
   >${data.contributionInfo}
 
-  # Test Instructions 
+  # Testing 
   >${data.testInfo}
 
-  # Contact Information
+  # Contact
   >${data.contactInfo}
 
-  -${data.githubUsername}
-  -${data.email}
+  - GitHub: [${data.githubUsername}](github.com/${data.githubUsername})
+
+  - Email: ${data.email}
 `;
 }
 

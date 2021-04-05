@@ -24,9 +24,10 @@ function generateMarkdown(data) {
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contribution](#contribution)
-  * [Testing](#testing)
-  * [Contact](#contact)
+  * [License](#license)
+  * [Contributing](#contribution)
+  * [Tests](#tests)
+  * [Questions](#questions)
 
   # Description
   >${data.description}
@@ -37,13 +38,16 @@ function generateMarkdown(data) {
   # Usage
   >${data.usageInfo}
 
-  # Contribution
+  # License
+  >
+
+  # Contributing
   >${data.contributionInfo}
 
-  # Testing 
+  # Tests 
   >${data.testInfo}
 
-  # Contact
+  # Questions
   >${data.contactInfo}
 
   - GitHub: [${data.githubUsername}](github.com/${data.githubUsername})

@@ -20,10 +20,34 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
+  # Table of Contents
   * [Description](#description)
+  * [Installation Instructions](#installationInfo)
+  * [Usage Information](#)
+  * [Contribution Guidelines](*)
+  * [Test Instructions](*)
+  * [Contact Information](*)
 
   # Description
   >${data.description}
+
+  # Installation Instructions
+  >${data.installationInfo}
+
+  # Usage Information
+  >${data.usageInfo}
+
+  # Contribution Guidelines
+  >${data.contributionInfo}
+
+  # Test Instructions 
+  >${data.testInfo}
+
+  # Contact Information
+  >${data.contactInfo}
+
+  -${data.githubUsername}
+  -${data.email}
 `;
 }
 

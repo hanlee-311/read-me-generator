@@ -39,7 +39,7 @@ function init() {
         {
         type: 'input',
         message: questions[4],
-        name: 'contribtuionInfo',
+        name: 'contributionInfo',
         },
         {
         type: 'input',

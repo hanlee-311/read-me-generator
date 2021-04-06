@@ -73,6 +73,24 @@ function init() {
         ]
         },
         {
+        type:'list',
+        message:'What year was this project made?',
+        name: 'year',
+        choices: [{
+            name:'2020',
+            value:'2020',
+        },
+        {
+            name: '2021',
+            value: '2021',
+        },
+        {
+            name:'2022',
+            value:'2022',
+        }
+        ]
+        },
+        {
         type: 'input',
         message: questions[7],
         name: 'githubUsername',

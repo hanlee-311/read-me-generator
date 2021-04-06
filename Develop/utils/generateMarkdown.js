@@ -20,7 +20,7 @@ function renderLicenseSection(license, year, githubUsername) {
   } 
 
   if (license === 'MIT') {
-    return `Copyright <${year}> <${githubUsername}>
+    return `Copyright ${year} ${githubUsername}
 
     Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
     
@@ -31,7 +31,7 @@ function renderLicenseSection(license, year, githubUsername) {
   }
 
   if (license === 'Apache%202.0') {
-    return `Copyright [${year}] [${githubUsername}]
+    return `Copyright ${year} ${githubUsername}
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -48,7 +48,7 @@ function renderLicenseSection(license, year, githubUsername) {
 
   if (license === 'GPL%203.0') {
     return `  <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) <${year}>  <${githubUsername}>
+    Copyright (C) ${year} ${githubUsername}
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -65,7 +65,7 @@ function renderLicenseSection(license, year, githubUsername) {
   }
 
   if (license === 'BSD%203') {
-    return `Copyright (c) $${year} $${githubUsername}, All rights reserved.
+    return `Copyright (c) ${year} ${githubUsername}, All rights reserved.
 
     Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
     
@@ -99,7 +99,7 @@ function generateMarkdown(data) {
   >${data.usageInfo}
 
   # License
-  >${renderLicenseSection(data.license)}
+  >${renderLicenseSection(data.license, data.year, data.githubUsername)}
 
   # Contributing
   >${data.contributionInfo}

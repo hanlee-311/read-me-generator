@@ -37,6 +37,6 @@
   # Questions
   >Please reach me via email with any questions you may have regarding the application. 
 
-  - GitHub: [hanlee-311](github.com/hanlee-311)
+  - GitHub: [hanlee-311](https://github.com/hanlee-311)
 
   - Email: 013hannah.a.lee@gmail.com

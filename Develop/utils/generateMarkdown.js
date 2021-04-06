@@ -110,7 +110,7 @@ function generateMarkdown(data) {
   # Questions
   >${data.contactInfo}
 
-  - GitHub: [${data.githubUsername}](github.com/${data.githubUsername})
+  - GitHub: [${data.githubUsername}](https://github.com/${data.githubUsername})
 
   - Email: ${data.email}
 `;

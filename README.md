@@ -18,27 +18,7 @@ SO THAT I can quickly create a professional README for a new project
 - The application will save the user's input and populate them into the README file that is generated
 - When the README file is generated, it populates the user's project folder
 
-### Walkthrough Video: 27%
-
-* A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-* The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-* The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
-
-
-
-
-## Review
-
-You are required to submit the following for review:
-
-* A walkthrough video demonstrating the functionality of the application.
-
-* A sample README.md file for a project repository generated using your application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
+## Walkthrough Video
+[Link to video](https://drive.google.com/file/d/1cLMyey44-kwPISUN_JfeoLCfUKdlAnoi/view)
 
 

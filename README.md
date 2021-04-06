@@ -3,7 +3,7 @@
 # Description
 Want an easy way to generate a README file for your application with guiding questions? Then look no further! This application will generate a README for your project instantly. Answer the questions that pop up in your terminal and based on your input, a professional README will be generated for your project. It's that easy!
 
-Please note that this is for node users. 
+Please note that to run this application, you will need to have downloaded node. Please visit the node website and download the lastest stable version to use this application. 
 
 ## User Story
 
